@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        const numbers1 = [5, 6, 7, 8, 2];
+        const sortResult = numbers1.sort();
+        console.log(sortResult);
+
+        const numbers2 = [5, 6, 3, 8, 9];
+        const asc = numbers2.sort(function(a, b) {
+            return a - b;
+        });
+        console.log(asc);
+        const desc = numbers2.sort(function(a, b) {
+            return b - a;
+        });
+
+        console.log(desc);
+
+        const values = ["g", "h", "a", "c", "a", "h"];
+        const duplicates = values.filter(
+            (item, index) => index !== values.indexOf(item)
+        );
+        console.log(duplicates);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head> </head>
+
+<body>
+    <script>
+        var string = "Welcome to this Javascript Guide!";
+
+        // Output becomes !ediuG tpircsavaJ siht ot emocleW
+        var reverseEntireSentence = reverseBySeparator(string, "");
+
+        // Output becomes emocleW ot siht tpircsavaJ !ediuG
+        var reverseEachWord = reverseBySeparator(reverseEntireSentence, " ");
+
+        function reverseBySeparator(string, separator) {
+            var reverseOutput = string.split(separator).reverse().join(separator);
+            console.log(reverseOutput);
+            return reverseOutput;
+        }
+
+        function duplicateArray(arr) {
+            let duplicateArray = arr.concat(arr);
+            console.log(duplicateArray);
+
+            let arrayWithSeparator = arr.join(",");
+            console.log(arrayWithSeparator);
+        }
+
+        duplicateArray([1, 2, 3, 4, 5]);
+
+        function mul(a) {
+            return function(b) {
+                return function(c) {
+                    return a * b * c;
+                };
+            };
+        }
+
+        console.log(mul(2)(3)(4));
+        //
+
+        function createBase(a) {
+            return function(n) {
+                return a + n;
+            };
+        }
+
+        var addSix = createBase(6);
+        console.log(addSix(10));
+        console.log(addSix(21));
+    </script>
+</body>
+
+</html>

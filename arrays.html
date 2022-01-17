@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+
+    <script>
+        const cars = ["volvo", "bmw", "toyoto"]
+        const length = cars.length;
+        console.log(length);
+        console.log(cars);
+        console.log(cars[1]);
+        cars[3] = "Honda";
+        console.log(cars);
+        console.log(cars.sort());
+        console.log(cars[cars.length - 1]);
+        const fruits = ["mango", "orange", "apple", "kiwi", "strawberry", "guava", "grapes"]
+        let fruitLength = fruits.length;
+        console.log(fruitLength);
+        let text = "<ul>"
+        for (i = 0; i < fruitLength; i++) {
+            text += "<li>" + fruits[i] + "</li>";
+
+        }
+        text += "<ul>";
+        console.log(text);
+        document.getElementById("demo").innerHTML = text;
+    </script>
+
+</body>
+
+</html>

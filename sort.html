@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript Arrays</h2>
+
+    <p>The Array.sort() method sorts the elements of an array.</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        const ages = [32, 33, 16, 40];
+        fruits.sort();
+        fruits.reverse();
+        fruits.unshift("Grapes");
+        fruits.pop(4);
+        fruits.push("Pineapple");
+        let result = Array.isArray(fruits);
+        console;
+        document.getElementById("demo").innerHTML = fruits;
+        document.getElementById("demo1").innerHTML = result;
+        document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+
+        function checkAdult(age) {
+            return age >= 18;
+        }
+
+        //To find duplicates in the array
+        const numbers = [1, 2, 3, 2, 4, 5, 5, 6];
+        const duplicates = numbers.filter(
+            (item, index) => index !== numbers.indexOf(item)
+        );
+        console.log(duplicates);
+
+        //To sort the array in ascending using sort
+
+        const numbers1 = [4, 5, 7, 3, 2, 8];
+        const asc = numbers1.sort(function(a, b) {
+            return a - b;
+        });
+        console.log(asc);
+        //To sort the array in descending using sort
+        const desc = numbers1.sort(function(a, b) {
+            return b - a;
+        });
+        console.log(desc);
+
+        //To remove duplicates in the array
+        const numbers2 = [1, 2, 3, 2, 4, 5, 5, 6];
+        const duplicates2 = numbers2.filter(
+            (item, index) => index == numbers2.indexOf(item)
+        );
+        console.log(duplicates2);
+    </script>
+</body>
+
+</html>
